@@ -41,17 +41,16 @@ on:
           - 'oneplus_pad2_b'
           - 'oneplus_pad_pro_b'
           - 'oneplus_ace5_race_b'
-          - 'oneplus_ace5_race_v'
           - 'oneplus_nord_5_b'
           - 'oneplus_11_b'
           - 'oneplus_12r_b'
           - 'oneplus_ace2_pro_b'
           - 'oneplus_ace3_b'
           - 'oneplus_open_b'
-          - 'oneplus_10t'
+          - 'oneplus_10t_v'
           - 'oneplus_11r_b'
           - 'oneplus_ace2_b'
-          - 'oneplus_ace_pro'
+          - 'oneplus_ace_pro_v'
           - 'oneplus_10_pro_v'
           - 'oneplus_ace_3v_b'
           - 'oneplus_nord_4_b'
@@ -71,7 +70,7 @@ on:
         default: 'android14'
         
       KERNEL_VERSION:
-        description: "内核版本"
+        description: "内核安卓KMI版本"
         required: true
         type: choice
         options:
@@ -274,13 +273,6 @@ jobs:
           echo "⬇️ 下载SukiSU设置工具..."
           curl -L -o sukisu_setup.bin https://github.com/Xiaomichael/OnePlus-Actions/raw/Build/script/sukisu_setup_40129.bin
           chmod +x sukisu_setup.bin
-          
-          # 验证Makefile存在
-          if [ ! -f "kernel/Makefile" ]; then
-            echo "❌ 错误：缺少kernel/Makefile"
-            ls -la
-            exit 1
-          fi
           
           ./sukisu_setup.bin
           rm -rf ./sukisu_setup.bin

@@ -41,17 +41,16 @@ on:
           - 'oneplus_pad2_b'
           - 'oneplus_pad_pro_b'
           - 'oneplus_ace5_race_b'
-          - 'oneplus_ace5_race_v'
           - 'oneplus_nord_5_b'
           - 'oneplus_11_b'
           - 'oneplus_12r_b'
           - 'oneplus_ace2_pro_b'
           - 'oneplus_ace3_b'
           - 'oneplus_open_b'
-          - 'oneplus_10t'
+          - 'oneplus_10t_v'
           - 'oneplus_11r_b'
           - 'oneplus_ace2_b'
-          - 'oneplus_ace_pro'
+          - 'oneplus_ace_pro_v'
           - 'oneplus_10_pro_v'
           - 'oneplus_ace_3v_b'
           - 'oneplus_nord_4_b'
@@ -60,7 +59,7 @@ on:
         default: 'oneplus_12_b'
         
       ANDROID_VERSION:
-        description: "安卓KMI版本"
+        description: "内核安卓KMI版本"
         required: true
         type: choice
         options:
@@ -82,7 +81,7 @@ on:
         default: '6.1'
 
       SUSFS:
-        description: "是否启用SUSFS"
+        description: "是否启用SUSFS(近期上游在写shit, 建议关闭, 否则编译绝对报错)"
         required: true
         type: choice
         options:
